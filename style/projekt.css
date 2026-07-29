@@ -22,7 +22,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  font-size: 0.8em;
+  font-size: 1em;
   text-align: center;
   mix-blend-mode: difference;
   line-height: 0.6;
@@ -49,7 +49,7 @@ body {
 
 #navibereich a:hover {
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   text-decoration: none;
 }
 
@@ -57,7 +57,7 @@ body {
   position: fixed;
   z-index: 10;
   color: white;
-  font-size: 0.8em;
+  font-size: 1em;
 
   bottom: 0;
   width: 100%;
@@ -69,7 +69,7 @@ body {
   position: fixed;
   z-index: 10;
   color: white;
-  font-size: 0.8em;
+  font-size: 1em;
   text-decoration: none;
   top: 0.4em;
   width: 100%;
@@ -79,7 +79,7 @@ body {
 
 .zurueck a:hover {
   color: white;
-  font-size: 1em;
+  font-size: 1.5em;
   text-decoration: none;
 }
 
@@ -134,7 +134,7 @@ img.special-image {
     z-index: 10;
     font-size: 1.2em;
     text-align: center;
-
+    line-height: 0.55;
     padding: 0;
     margin: 0;
     transition: opacity 0.3s ease;
