@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Arizona", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+button {
+  border: none;
+  outline: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Arizona", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: rgb(41, 41, 41);
+  margin-top: 50px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Scrollbereich */
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+  scroll-behavior: smooth;
+}
+
+/* Jede Story-Einheit */
+
+.panel1 {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  scroll-snap-align: center;
+  scroll-behavior: smooth;
+}
+
+.panel1 p {
+  text-align: center;
+  width: 80%;
+  font-size: 1.5rem;
+  font-family: "Arizona", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.panel {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  scroll-snap-align: center;
+  scroll-behavior: smooth;
+}
+
+.panel p {
+  text-align: center;
+  width: 80%;
+  font-size: 1.5rem;
+  font-family: "Arizona", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.panel.form-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontal zentrieren */
+  justify-content: center; /* vertikal zentrieren */
+  height: 100vh;
+
+  scroll-snap-align: center;
+  scroll-behavior: smooth;
+}
+
+.panel.form-panel p {
+  text-align: center;
+  width: 80%;
+  font-size: 1.5rem;
+  font-family: "Arizona", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+textarea {
+  height: 80vh;
+  width: 80%;
+  resize: none;
+  border: none;
+  outline: none;
+  background: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-family: "Arizona", sans-serif;
+  color: #999;
+  text-align: center;
+}
+
+/* Spezielles Verhalten: zentriert */
+.textarea-center {
+  text-align: center;
+  line-height: 1.4;
+  padding: 0; /* remove padding-top */
+  width: 80%;
+  height: 80vh; /* optional, sonst passt flex die Höhe automatisch */
+}
+
+/* Normales Verhalten */
+textarea:not(.textarea-center) {
+  height: 2rem;
+  text-align: center;
+}
+
+textarea::placeholder {
+  color: #999; /* hellgrau */
+}
+
+#bottom-intro {
+  position: fixed;
+  bottom: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.intro-word {
+  display: inline-block; /* WICHTIG für scale() */
+  font-size: 1.5rem;
+  font-family: "Arizona", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 0;
+  color: #999;
+
+  animation: bottomIntro 3s ease-in-out 2;
+}
+
+@keyframes bottomIntro {
+  0% {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+}
+
+.about a {
+  position: fixed;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+  font-size: 0.8em;
+  text-decoration: none;
+  top: 0.4em;
+  width: 100%;
+  text-align: center;
+  font-family: "Arizona", sans-serif;
+  font-style: normal;
+}
+
+.about a:hover {
+  color: grey;
+  text-decoration: none;
+  font-family: "Arizona", sans-serif;
+  font-style: normal;
+}
+
+/*
+
+textarea {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 2rem;
+
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+*/
+
+@font-face {
+  font-family: "Arizona";
+  src: url("../fonts/EduArizonaSansVariable.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}

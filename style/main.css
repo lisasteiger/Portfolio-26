@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* Standardmäßiges Scrollverhalten */
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cell {
+  overflow: hidden;
+}
+.cell a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cell a:hover img {
+  transform: scale(1.1);
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-block {
+  margin: 100px auto;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.text-block img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+#navibereich {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 0.8em;
+  text-align: center;
+  mix-blend-mode: difference;
+  line-height: 0.6;
+  padding: 0;
+  margin: 0;
+}
+
+#navibereich ul {
+  padding: 0;
+  margin: 0;
+}
+
+#navibereich li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navibereich a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#navibereich a:hover {
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.about a {
+  position: fixed;
+  z-index: 10;
+  color: white;
+  font-size: 0.8em;
+  text-decoration: none;
+  top: 0.4em;
+  width: 100%;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+.about a:hover {
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  mix-blend-mode: difference;
+}
+
+.kontakt a {
+  position: fixed;
+  z-index: 10;
+  color: white;
+  font-size: 0.8em;
+  text-decoration: none;
+  bottom: 0.5em;
+  width: 100%;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+.kontakt a:hover {
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  mix-blend-mode: difference;
+}
+
+@media (max-width: 430px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr); /* 4 Bilder untereinander */
+    height: auto; /* damit es auf mobilen Geräten nicht abgeschnitten wird */
+  }
+
+  .cell {
+    height: 50vh; /* oder auto, je nach gewünschtem Verhalten */
+  }
+  .text-block {
+    margin: 100px auto;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  #navibereich {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 1.7em;
+    text-align: center;
+    line-height: 0.55;
+    padding: 0;
+    margin: 0;
+  }
+
+  #navibereich a {
+    text-shadow: 0 0 30px rgba(30, 30, 30, 0.6);
+  }
+
+  .about a {
+    position: fixed;
+    z-index: 10;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    top: 0.4em;
+    width: 100%;
+    text-align: center;
+  }
+
+  .kontakt a {
+    position: fixed;
+    z-index: 10;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    bottom: 0.5em;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  #menu-toggle {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    mix-blend-mode: difference;
+  }
+
+  #menu-toggle {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    cursor: pointer;
+
+    mix-blend-mode: difference;
+  }
+
+  #navibereich {
+    display: none;
+  }
+
+  #navibereich.open {
+    display: block;
+  }
+
+  #menu-toggle.hide {
+    display: none;
+  }
+
+  .about a {
+    position: fixed;
+    z-index: 10;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    top: 0.4em;
+    width: 100%;
+    text-align: center;
+  }
+
+  .kontakt a {
+    position: fixed;
+    z-index: 10;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    bottom: 0.5em;
+    width: 100%;
+    text-align: center;
+  }
+}
