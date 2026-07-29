@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
     // Nach 200ms Inaktivität wieder scharf stellen
     scrollTimeout = setTimeout(() => {
       nav.classList.remove("blur");
-    }, 200);
+    }, 2000);
   } else {
     // Sicherheitshalber: Effekt oberhalb 600px entfernen
     nav.classList.remove("blur");
