@@ -228,6 +228,11 @@ body {
     cursor: pointer;
 
     mix-blend-mode: difference;
+  }
+    
+  
+    #menu-toggle.hide {
+    display: none;
   }*/
 
   #navibereich {
@@ -236,10 +241,6 @@ body {
 
   #navibereich.open {
     display: block;
-  }
-
-  #menu-toggle.hide {
-    display: none;
   }
 
   .about a {
