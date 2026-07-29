@@ -211,7 +211,7 @@ body {
     cursor: pointer;
 
     mix-blend-mode: difference;
-  }*/
+  }
 
   #menu-toggle {
     display: block;
@@ -228,7 +228,7 @@ body {
     cursor: pointer;
 
     mix-blend-mode: difference;
-  }
+  }*/
 
   #navibereich {
     display: none;
